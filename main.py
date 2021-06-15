@@ -1,12 +1,10 @@
 class Algorithm:
-    def __init__(self):
-        print("This program get the word, and say you how many litters \"s\" and \"ss\" in word")
+    def __init__(self,word):
         self.temp_s = False
         self.s = 0
         self.ss = 0
-        self.word =""
-    def algo( self, word ):
         self.word = list(word)
+    def algo(self):
         for x in self.word:
             if x == 's':
                 self.s+=1
@@ -24,8 +22,12 @@ class Algorithm:
         return self.word
 
 
-
-
+print("This program get the word, and say you how many litters \"s\" and \"ss\" in word")
+word = input ("word: ")
+a = Algorithm(word)
+a.algo()
+s,ss=a.get_result()
 print(s,ss)
+
 
 
