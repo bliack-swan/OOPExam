@@ -16,18 +16,11 @@ class Algorithm:
             else:
                 self.temp_s = False
                 continue
-    def get_result( self ):
         return self.s, self.ss
     def get_word( self ):
         return self.word
 
 
-print("This program get the word, and say you how many litters \"s\" and \"ss\" in word")
-word = input ("word: ")
-a = Algorithm(word)
-a.algo()
-s,ss=a.get_result()
-print(s,ss)
 
 
 
