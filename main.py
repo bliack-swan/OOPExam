@@ -1,20 +1,30 @@
-temp_s = False
-s = 0
-ss = 0
+class Algorithm:
+    def __init__(self):
+        print("This program get the word, and say you how many litters \"s\" and \"ss\" in word")
+        self.temp_s = False
+        self.s = 0
+        self.ss = 0
+        self.word =""
+    def algo( self, word ):
+        self.word = list(word)
+        for x in self.word:
+            if x == 's':
+                self.s+=1
+                if self.temp_s:
+                    self.ss+=1
+                    self.temp_s = False
+                else:
+                    self.temp_s = True
+            else:
+                self.temp_s = False
+                continue
+    def get_result( self ):
+        return self.s, self.ss
+    def get_word( self ):
+        return self.word
 
-print("This program get the word, and say you how many litters \"s\" and \"ss\" in word")
-word = list(input('word: '))
-for x in word:
-    if x == 's':
-        s+=1
-        if temp_s:
-            ss+=1
-            temp_s = False
-        else:
-            temp_s = True
-    else:
-        temp_s = False
-        continue
+
+
 
 print(s,ss)
 
